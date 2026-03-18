@@ -27,38 +27,101 @@
  <!--==============================NAVBAR================================-->
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-    <div class="container">
+        <div class="container">
 
-        <a class="logo-marca navbar-brand mx-auto" href="#">
-        Tudo<i class="fa-solid fa-chart-pie mx-1"></i>Torta
-        </a>
+            <a class="logo-marca navbar-brand mx-auto" href="#">
+            Tudo<i class="fa-solid fa-chart-pie mx-1"></i>Torta
+            </a>
 
-        <!-- BOTÃO MOBILE -->
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
-         <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- BOTÃO MOBILE -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+            <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- MENU -->
-        <div class="collapse navbar-collapse" id="menuNavbar">
-        <ul class="navbar-nav ms-auto  text-lg-start">
+            <!-- MENU -->
+            <div class="collapse navbar-collapse" id="menuNavbar">
+            <ul class="navbar-nav ms-auto  text-lg-start">
 
-            <li class="nav-item  ">
-            <a class=" nav-link px-3" href="#produtos">Produtos</a>
-            </li>
+                <li class="nav-item  ">
+                <a class=" nav-link px-3" href="#produtos">Produtos</a>
+                </li>
 
-            <li class="nav-item">
-            <a class="nav-link px-3" href="#sobre">Sobre</a>
-            </li>
+                <li class="nav-item">
+                <a class="nav-link px-3" href="#sobre">Sobre</a>
+                </li>
 
-            <li class="nav-item">
-            <a class="nav-link px-3" href="#contato">Contato</a>
-            </li>
+                <li class="nav-item">
+                <a class="nav-link px-3" href="#contato">Contato</a>
+                </li>
 
-        </ul>
+            </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+     <!--==============================CARROSSEL DE CARDS================================-->
+
+
+
+    <div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
+    
+    <!-- Contêiner dos cards -->
+    <div class="carousel-inner">
+        <!-- Card 1 -->
+        <div class="carousel-item active">
+        <div class="d-flex justify-content-center">
+            <div class="card text-center bg-warning mx-2" style="width: 18rem;">
+            <img src="imagens/maxresdefault-removebg-preview.png" class="card-img-top" alt="Imagem 1">
+            <div class="card-body">
+                <h5 class="card-title">Título 1</h5>
+                <p class="card-text">Descrição do conteúdo 1</p>
+            </div>
+            </div>
+            <div class="card text-center bg-warning mx-2" style="width: 18rem;">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem 2">
+            <div class="card-body">
+                <h5 class="card-title">Título 2</h5>
+                <p class="card-text">Descrição do conteúdo 2</p>
+            </div>
+            </div>
+        </div>
         </div>
 
+        <!-- Card 2 -->
+        <div class="carousel-item">
+        <div class="d-flex justify-content-center">
+            <div class="card text-center bg-warning mx-2" style="width: 18rem;">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem 3">
+            <div class="card-body">
+                <h5 class="card-title">Título 3</h5>
+                <p class="card-text">Descrição do conteúdo 3</p>
+            </div>
+            </div>
+            <div class="card text-center bg-warning mx-2" style="width: 18rem;">
+            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Imagem 4">
+            <div class="card-body">
+                <h5 class="card-title">Título 4</h5>
+                <p class="card-text">Descrição do conteúdo 4</p>
+            </div>
+            </div>
+        </div>
+        </div>
     </div>
-    </nav>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselCards" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+    </button>
+    </div>
+
+
     
    
    
