@@ -84,6 +84,7 @@
 
 /* Cor padrão */
 .navbar .nav-link {
+  font-size: 13px;
   font-family: "Fjalla One", sans-serif;
   color: orange; /* vermelho moderno */
 }
