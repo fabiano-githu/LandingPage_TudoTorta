@@ -1,0 +1,89 @@
+/* ============================== NAVBAR ============================== */
+
+/* Remove espaçamento vertical da navbar (deixa mais compacta) */
+.navbar {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+/* ============================== LOGO ============================== */
+
+/* Estilo principal da logo */
+.logo-marca {
+  font-family: "Merienda", cursive; /* Fonte personalizada */
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px; /* Tamanho do texto */
+  line-height: 1; /* Evita aumentar altura da navbar */
+  display: flex; /* Alinhamento horizontal */
+  align-items: center; /* Centraliza verticalmente */
+  transition: all 0.3s ease; /* Animação suave */
+  cursor: pointer; /* Cursor de clique */
+}
+
+/* Estilo do ícone dentro da logo */
+.logo-marca i {
+  color: orange; /* Cor padrão do ícone */
+  font-size: 25px; /* Tamanho do ícone */
+  margin: 0 4px; /* Espaçamento entre texto e ícone */
+  transition: all 0.3s ease; /* Animação suave */
+}
+
+
+/* ============================== HOVER LOGO ============================== */
+
+/* Efeito ao passar o mouse na logo */
+.logo-marca:hover {
+  transform: scale(1.05); /* Aumenta levemente */
+}
+
+/* Efeito no ícone ao passar o mouse */
+.logo-marca:hover i {
+  transform: rotate(10deg) scale(1.15); /* Gira e aumenta */
+  color: #ffca2c; /* Amarelo mais vivo */
+}
+
+
+/* ============================== BOTÃO HAMBÚRGUER ============================== */
+
+/* Define a cor da borda do botão mobile */
+.navbar-toggler {
+  border-color:orange; /* Amarelo Bootstrap */
+}
+
+/* Substitui o ícone padrão por linhas amarelas */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='orange' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* ============================== AJUSTES OPCIONAIS ============================== */
+
+/* Remove a borda do botão (visual mais moderno) */
+.navbar-toggler {
+  border: none;
+}
+
+/* Remove o efeito azul ao clicar (focus) */
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* ============================== NAV LINKS ============================== */
+
+/* Cor padrão */
+.navbar .nav-link {
+  font-family: "Fjalla One", sans-serif;
+  color: orange; /* vermelho moderno */
+}
+
+/* Hover (mouse em cima) */
+.navbar .nav-link:hover {
+  color: white; /* vermelho mais claro */
+}
+
+/* Link ativo */
+.navbar .nav-link.active {
+  color: #ff4d5a;
+}
