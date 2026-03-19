@@ -99,33 +99,81 @@
   color: #ff4d5a;
 }
 
-.carousel-item {
-      padding: 2rem 0;
-    }
+/* FUNDO COM MOVIMENTO */
+.hero-glass {
+  min-height: 100vh;
+  background: linear-gradient(270deg, #000000, #1a1a1a, #000000);
+  background-size: 600% 600%;
+  animation: gradientMove 12s ease infinite;
+}
 
-    .card {
-      background-color: #FFD700; /* amarelo */
-      border: none;
-      border-radius: 15px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+/* ANIMAÇÃO DO FUNDO */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
+/* CAIXA DE VIDRO */
+.glass-box {
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  max-width: 1000px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  transition: 0.4s;
+}
 
-    .card-img-top {
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      width: 288PX;
-      height: 400px;
-      object-fit: cover;
-    }
+/* HOVER SUAVE */
+.glass-box:hover {
+  transform: scale(1.03);
+}
 
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      background-color: rgba(0,0,0,0.5);
-      border-radius: 50%;
-      padding: 10px;
-    }
+/* TÍTULO */
+.glass-box h1 {
+  color:ORANGE;
+}
+
+/* BOTÃO VERDE PROFISSIONAL */
+.btn-success {
+  background: linear-gradient(45deg, #25D366, #1ebe5d);
+  border: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-success:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #1ebe5d, #25D366);
+}
+
+
+
+/* ============================== CARS CARROSSEL PRODUTOS ============================== */
+
+.card-custom {
+  background-color: orange;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Hover suave */
+.card-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Imagem ajustada */
+.img-custom {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* não distorce */
+}
