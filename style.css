@@ -1,6 +1,9 @@
-/* ============================== STYLE BODY ============================== */
 
 
+
+/* ====================================================== 
+                         STYLE BODY 
+======================================================== */
 .body{
     background-color:#1f1f1f ;
 
@@ -8,17 +11,21 @@
 
 }
 
-/* ============================== NAVBAR ============================== */
 
-/* Remove espaçamento vertical da navbar (deixa mais compacta) */
+
+/* ==================================================== 
+                          NAVBAR 
+====================================================== */
 .navbar {
   padding-top: 0px;
   padding-bottom: 0px;
 }
 
 
-/* ============================== LOGO ============================== */
 
+/* =================================================== 
+                         LOGO 
+===================================================== */
 /* Estilo principal da logo */
 .logo-marca {
   font-family: "Merienda", cursive; /* Fonte personalizada */
@@ -41,8 +48,9 @@
 }
 
 
-/* ============================== HOVER LOGO ============================== */
-
+/* ================================================= 
+                     HOVER LOGO 
+==================================================== */
 /* Efeito ao passar o mouse na logo */
 .logo-marca:hover {
   transform: scale(1.05); /* Aumenta levemente */
@@ -55,8 +63,9 @@
 }
 
 
-/* ============================== BOTÃO HAMBÚRGUER ============================== */
-
+/* =============================================== 
+                  BOTÃO HAMBÚRGUER 
+================================================== */
 /* Define a cor da borda do botão mobile */
 .navbar-toggler {
   border-color:orange; /* Amarelo Bootstrap */
@@ -68,8 +77,9 @@
 }
 
 
-/* ============================== AJUSTES OPCIONAIS ============================== */
-
+/* ============================================== 
+                AJUSTES OPCIONAIS 
+================================================= */
 /* Remove a borda do botão (visual mais moderno) */
 .navbar-toggler {
   border: none;
@@ -80,8 +90,11 @@
   box-shadow: none;
 }
 
-/* ============================== NAV LINKS ============================== */
 
+
+/*============================================ 
+                    NAV LINKS 
+==============================================*/
 /* Cor padrão */
 .navbar .nav-link {
   font-size: 13px;
@@ -99,7 +112,11 @@
   color: #ff4d5a;
 }
 
-/* FUNDO COM MOVIMENTO */
+
+
+/* ============================================
+   HERO SECTION - FUNDO ANIMADO + GLASSMORPHISM
+   ============================================*/
 .hero-glass {
   min-height: 100vh;
   background: linear-gradient(270deg, #000000, #1a1a1a, #000000);
@@ -122,7 +139,7 @@
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255,255,255,0.2);
   color: #fff;
-  max-width: 1000px;
+  max-width: 2200px;
   width: 90%;
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
   transition: 0.4s;
@@ -138,7 +155,11 @@
   color:ORANGE;
 }
 
-/* BOTÃO VERDE PROFISSIONAL */
+
+
+/* =======================================
+   BOTÃO DE AÇÃO (CTA - CALL TO ACTION)
+   =======================================*/
 .btn-success {
   background: linear-gradient(45deg, #25D366, #1ebe5d);
   border: none;
@@ -153,7 +174,9 @@
 
 
 
-/* ============================== CARS CARROSSEL PRODUTOS ============================== */
+/* ====================================== 
+      CARS CARROSSEL PRODUTOS
+ ======================================== */
 
 .card-custom {
   background-color: orange;
