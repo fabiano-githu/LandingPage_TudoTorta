@@ -41,10 +41,9 @@
 
 /* Estilo do ícone dentro da logo */
 .logo-marca i {
-  color: orange; /* Cor padrão do ícone */
-  font-size: 25px; /* Tamanho do ícone */
-  margin: 0 4px; /* Espaçamento entre texto e ícone */
-  transition: all 0.3s ease; /* Animação suave */
+  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -97,19 +96,23 @@
 ==============================================*/
 /* Cor padrão */
 .navbar .nav-link {
-  font-size: 13px;
+  font-size: 14px;
   font-family: "Fjalla One", sans-serif;
-  color: orange; /* vermelho moderno */
+  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
 }
 
 /* Hover (mouse em cima) */
 .navbar .nav-link:hover {
-  color: white; /* vermelho mais claro */
-}
+  background: linear-gradient(135deg, #ff9f43, #ffd166);
+  background-clip: text;
+  -webkit-background-clip: text;
 
-/* Link ativo */
-.navbar .nav-link.active {
-  color: #ff4d5a;
+  transform: translateY(-2px);
 }
 
 
@@ -118,10 +121,24 @@
    HERO SECTION - FUNDO ANIMADO + GLASSMORPHISM
    ============================================*/
 .hero-glass {
-  min-height: 100vh;
-  background: linear-gradient(270deg, #000000, #1a1a1a, #000000);
-  background-size: 600% 600%;
-  animation: gradientMove 12s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("imagens/Coxinha-low-carb-na-airfryer.jpg.webp") center/cover no-repeat;
+  opacity: 0.3;
+
+  z-index: 0;
+}
+
+.hero-glass > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* ANIMAÇÃO DO FUNDO */
@@ -137,9 +154,9 @@
   border-radius: 20px;
   backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 10px solid rgba(255,255,255,0.2);
   color: #fff;
-  max-width: 2200px;
+  max-width: 1000px;
   width: 90%;
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
   transition: 0.4s;
@@ -152,7 +169,9 @@
 
 /* TÍTULO */
 .glass-box h1 {
-  color:ORANGE;
+  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -175,28 +194,103 @@
 
 
 /* ====================================== 
-      CARS CARROSSEL PRODUTOS
+              FUNDO DOS CARDS 
  ======================================== */
-
 .card-custom {
-  background-color: orange;
-  width: 100%;
-  max-width: 320px;
-  border-radius: 15px;
+  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+  color: #fff;
+  border: none;
+  border-radius: 18px;
   overflow: hidden;
-  transition: all 0.4s ease;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
 }
 
-/* Hover suave */
+/* HOVER DO CARD */
 .card-custom:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.35);
 }
 
-/* Imagem ajustada */
-.img-custom {
-  width: 100%;
-  height: 200px;
-  object-fit: cover; /* não distorce */
+/* IMAGEM */
+.card-custom img {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* TEXTO */
+.card-custom h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-custom p {
+  font-size: 0.95rem;
+}
+
+/* PREÇO */
+.card-custom .text-success {
+  color: #00ff88 !important;
+  font-size: 1.1rem;
+}
+
+/* ==================================== 
+                 BOTÕES 
+====================================== */
+
+/* BOTÃO COMPRAR */
+.btn-comprar {
+  background: #00c853;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* HOVER COMPRAR */
+.btn-comprar:hover {
+  background: #00e676;
+  transform: scale(1.05);
+}
+
+/* BOTÃO DETALHES */
+.btn-detalhes {
+  background: #1c1c1c;
+  color: #fff;
+  border: none;
+  font-size: 0.9rem;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+/* HOVER DETALHES */
+.btn-detalhes:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+
+/* TAMANHO DOS BOTÕES (lado a lado) */
+.card-custom .btn {
+  flex: 1; /* divide espaço automaticamente */
+}
+
+/* ESPAÇAMENTO ENTRE BOTÕES */
+.card-custom .d-flex {
+  display: flex;
+  flex-direction: row; /* ✔ lado a lado */
+  gap: 8px;
+}
+/* ========================================
+               RESPONSIVO 
+  ======================================== */
+@media (max-width: 576px) {
+  .card-custom img {
+    height: 140px;
+  }
+
+  .card-custom h5 {
+    font-size: 1rem;
+  }
 }
