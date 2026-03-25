@@ -287,3 +287,57 @@ body {
 .card-icone:hover i {
   color: #d35400;
 }
+
+
+/* ======================================================
+                    CSS SECTION CONTATOS
+====================================================== */
+/* FUNDO DA SECTION */
+.contato-section {
+  background: #fff;
+}
+
+/* INPUTS MAIS BONITOS */
+.form-control {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* FOCO NOS INPUTS */
+.form-control:focus {
+  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.3);
+  border-color: #ff7a00;
+}
+
+
+/* =========================================
+        HOVER NOS ÍCONES - CONTATO
+========================================= */
+
+/* Transição suave */
+.contato-section i {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+.contato-section i:hover {
+  transform: scale(1.2) rotate(8deg);
+}
+
+/* CORES PERSONALIZADAS NO HOVER */
+
+/* WhatsApp */
+.contato-section .bi-whatsapp:hover {
+  color: #25D366;
+}
+
+/* Email */
+.contato-section .bi-envelope-fill:hover {
+  color: #ff9800;
+}
+
+/* Localização */
+.contato-section .bi-geo-alt-fill:hover {
+  color: #e53935;
+}
