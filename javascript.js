@@ -185,3 +185,17 @@ ${mensagem}`;
 
 // Atualiza automaticamente o ano
 document.getElementById("ano").textContent = new Date().getFullYear();
+
+
+
+// =============================
+    // BOTÃO FLUTUANTE 
+    // =============================
+
+const telefone = "5521968061820"; // seu número com DDI + DDD
+
+const mensagem = "Olá! Vim pelo site e gostaria de fazer um pedido 🍰";
+
+const link = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+
+document.getElementById("btnWhats").href = link;
