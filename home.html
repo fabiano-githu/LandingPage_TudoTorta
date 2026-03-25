@@ -153,87 +153,109 @@
 </section>
 
 <!-- =================SECTION CONTATOS ==============-->
-
 <section class="contato-section py-5" id="contato">
   <div class="container">
 
     <!-- TÍTULO -->
     <div class="text-center mb-5">
-      <h2 class="fw-bold">Fale Conosco</h2>
-      <p class="text-muted">Faça seu pedido ou tire suas dúvidas 🍰</p>
+      <h2 class="fw-bold">Peça sua Torta 🍰</h2>
+      <p class="text-muted">Atendimento rápido e direto pelo WhatsApp</p>
     </div>
 
-    <div class="row g-4 align-items-center">
+    
+    <a class="logo-marca navbar-brand mx-auto" href="#">
+      Tudo<i class="fa-solid fa-chart-pie mx-1"></i>Torta
+    </a>
 
-      <!-- INFORMAÇÕES -->
+    <div class="row g-4">
+
+      <!-- 📌 INFORMAÇÕES -->
       <div class="col-lg-5">
 
-        <div class="d-flex align-items-center mb-4">
-          <i class="bi bi-whatsapp fs-2 text-success me-3"></i>
-          <div>
-            <h6 class="mb-0">WhatsApp</h6>
-            <small>(21) 99999-9999</small>
-          </div>
-        </div>
+        <div class="info-box p-4 h-100">
 
-        <div class="d-flex align-items-center mb-4">
-          <i class="bi bi-envelope-fill fs-2 text-warning me-3"></i>
-          <div>
-            <h6 class="mb-0">Email</h6>
-            <small>contato@tudotorta.com</small>
-          </div>
-        </div>
+          <h5 class="mb-4">Contato</h5>
 
-        <div class="d-flex align-items-center">
-          <i class="bi bi-geo-alt-fill fs-2 text-danger me-3"></i>
-          <div>
-            <h6 class="mb-0">Localização</h6>
-            <small>Rio de Janeiro - RJ</small>
-          </div>
+          <p><i class="bi bi-whatsapp text-success"></i> (21) 99999-9999</p>
+
+          <p>
+            <i class="bi bi-instagram text-danger"></i> 
+            @suaempresa
+          </p>
+
+          <p>
+            <i class="bi bi-geo-alt text-warning"></i> 
+            Rio de Janeiro - RJ
+          </p>
+
+          <hr>
+
+          <p class="small text-muted">
+            Faça seu pedido preenchendo o formulário ao lado. 
+            Você será redirecionado automaticamente para o WhatsApp.
+          </p>
+
         </div>
 
       </div>
 
-      <!-- FORMULÁRIO -->
+      <!-- 📌 FORMULÁRIO -->
       <div class="col-lg-7">
-        <div class="card shadow-sm border-0 rounded-4 p-4">
 
-          <form>
-            <div class="row g-3">
+        <div class="form-box bg-dark p-4">
 
-              <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Seu nome">
+          <form id="formPedido">
+
+            <div class="row">
+
+              <div class="col-md-6 mb-3">
+                <input type="text" id="nome" class="form-control" placeholder="Seu nome">
               </div>
 
-              <div class="col-md-6">
-                <input type="email" class="form-control" placeholder="Seu email">
-              </div>
-
-              <div class="col-12">
-                <input type="text" class="form-control" placeholder="Assunto">
-              </div>
-
-              <div class="col-12">
-                <textarea class="form-control" rows="4" placeholder="Sua mensagem"></textarea>
-              </div>
-
-              <div class="col-12">
-                <button class="btn btn-success w-100 fw-bold">
-                  <i class="bi bi-send-fill me-2"></i>
-                  Enviar Mensagem
-                </button>
+              <div class="col-md-6 mb-3">
+                <input type="text" id="whatsapp" class="form-control" placeholder="Seu WhatsApp">
               </div>
 
             </div>
+
+            <div class="row">
+
+              <div class="col-md-6 mb-3">
+                <input type="text" id="sabor" class="form-control" placeholder="Sabor da torta">
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <select id="tamanho" class="form-select">
+                  <option>20cm</option>
+                  <option>30cm</option>
+                  <option>40cm</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="mb-3">
+              <textarea id="mensagem" class="form-control" placeholder="Observações"></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar btn-success w-100 btn-pedido">
+              Fazer Pedido no WhatsApp
+            </button>
+
+            <!-- MENSAGEM DE ERRO -->
+            <div id="erroForm" class="text-danger mt-2 d-none">
+              Preencha nome e WhatsApp!
+            </div>
+
           </form>
 
         </div>
+
       </div>
 
     </div>
   </div>
 </section>
-
 
 <!-- ================= SCRIPTS ================= -->
 
@@ -242,6 +264,8 @@
 
 <!-- SEU SCRIPT (OBRIGATÓRIO) -->
 <script src="javascript.js"></script>
+
+
 
 </body>
 </html>
