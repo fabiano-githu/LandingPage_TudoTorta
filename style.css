@@ -309,6 +309,140 @@ body {
 
 
 /* ======================================================
+                CSS BANNER ONLINE TORTA 
+====================================================== */
+
+.banner-cardapio {
+  position: relative;
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* IMAGEM */
+.banner-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 6s ease;
+}
+
+/* ZOOM */
+.banner-cardapio:hover .banner-img {
+  transform: scale(1.1);
+}
+
+/* OVERLAY */
+.banner-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+}
+
+/* CONTEÚDO CENTRAL */
+.banner-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: #fff;
+
+  animation: fadeUp 1s ease;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CAIXA GLASS CENTRAL */
+.info-box {
+  font-size: 40px;
+  max-width: 800px;
+  width: 90%;
+  min-height: 300px;
+
+  background: rgba(19, 8, 8, 0.15);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+
+  transition: 0.3s ease;
+}
+
+/* HOVER CAIXA (CORRIGIDO) */
+.info-box:hover {
+  transform: scale(1.05);
+  background: rgba(26, 19, 19, 0.25);
+}
+
+/* ITENS */
+.info-box p {
+  margin: 6px 0;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/* HOVER ITENS */
+.info-box p:hover {
+  transform: translateX(5px);
+  color: #ffd369;
+}
+
+/* TÍTULO */
+.banner-content h2 {
+  color: #ff9f43;
+  font-family: "Merienda", cursive;
+  font-size: 80px;
+  transition: 0.3s;
+}
+
+/* HOVER TÍTULO */
+.banner-content h2:hover {
+  letter-spacing: 2px;
+}
+
+/* PARÁGRAFO */
+.paragrafo-banner {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .banner-cardapio {
+    height: 80vh;
+  }
+
+  .banner-content h2 {
+    font-size: 40px;
+  }
+
+  .info-box {
+    font-size: 18px;
+    padding: 15px;
+  }
+}
+/* ======================================================
                     SECTION SOBRE
 ====================================================== */
 

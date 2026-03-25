@@ -7,12 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
       img: "imagens/coxinha-de-frango-jpeg.webp",
       desc: "Coxinha de frango crocante e deliciosa"
     },
-    {
-      nome: "Torta Salgada de Pão de forma",
-      preco: "R$ 6,00",
-      img: "imagens/WhatsApp Image 2024-03-24 at 20.37.30.jpeg",
-      desc: "Torta cremosa e saborosa"
-    },
+   
     {
       nome: "Pastel de Forno (Frango)",
       preco: "R$ 6,00",
