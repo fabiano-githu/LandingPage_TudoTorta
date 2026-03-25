@@ -102,3 +102,83 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProdutos();
 
 });
+
+// Aguarda todo o HTML carregar antes de executar o script
+document.addEventListener("DOMContentLoaded", function() {
+
+  // Seleciona o formulário pelo ID
+  const form = document.getElementById("formPedido");
+
+  // Escuta o evento de envio do formulário
+  form.addEventListener("submit", function(e) {
+
+    // Impede o comportamento padrão (recarregar a página)
+    e.preventDefault();
+
+    // =============================
+    // CAPTURANDO OS VALORES DOS CAMPOS
+    // =============================
+
+    const nome = document.getElementById("nome").value;
+    const whatsapp = document.getElementById("whatsapp").value;
+    const sabor = document.getElementById("sabor").value;
+    const tamanho = document.getElementById("tamanho").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    const erro = document.getElementById("erroForm");
+
+    if (!nome || !whatsapp) {
+      erro.classList.remove("d-none");
+
+      if (!nome) {
+        document.getElementById("nome").style.border = "2px solid red";
+      }
+
+      if (!whatsapp) {
+        document.getElementById("whatsapp").style.border = "2px solid red";
+      }
+
+      return;
+    } else {
+      erro.classList.add("d-none");
+    }
+
+    // =============================
+    // MONTANDO A MENSAGEM
+    // =============================
+
+    const texto =
+`🍰 *NOVO PEDIDO* 🍰
+
+👤 Nome: ${nome}
+📱 WhatsApp: ${whatsapp}
+
+🥧 Sabor: ${sabor}
+📏 Tamanho: ${tamanho}
+
+📝 Observações:
+${mensagem}`;
+
+    // =============================
+    // NÚMERO QUE VAI RECEBER A MENSAGEM
+    // IMPORTANTE: formato com DDD + país (55 = Brasil)
+    // =============================
+
+    const numero = "5521968061820"; // 🔴 TROQUE PELO SEU NÚMERO
+
+    // =============================
+    // CRIANDO A URL DO WHATSAPP
+    // encodeURIComponent evita erro com acentos e espaços
+    // =============================
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    // =============================
+    // ABRE O WHATSAPP EM UMA NOVA ABA
+    // =============================
+
+    window.open(url, "_blank");
+
+  });
+
+});

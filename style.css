@@ -314,6 +314,7 @@ body {
 
 /* Fundo */
 .sobre-section {
+  height: 900px;
   background: linear-gradient(135deg, #ff7a00, #ff9f43);
 }
 
@@ -394,32 +395,94 @@ body {
         HOVER NOS ÍCONES - CONTATO
 ========================================= */
 
-/* Transição suave */
-.contato-section i {
-  transition: all 0.3s ease;
-  cursor: pointer;
+/* FUNDO */
+.contato-section{
+  height: 900px;
+  background: linear-gradient(135deg, #ff7a00, #ff9f43);
 }
 
-/* Efeito ao passar o mouse */
-.contato-section i:hover {
-  transform: scale(1.2) rotate(8deg);
+/* BOX */
+.form-box {
+  max-width: 500px;
+  background: #ff9f43;
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
-/* CORES PERSONALIZADAS NO HOVER */
-
-/* WhatsApp */
-.contato-section .bi-whatsapp:hover {
-  color: #25D366;
+/* HOVER */
+.info-box i:hover {
+  transform: scale(2.2);
+  opacity: 1.8;
 }
 
-/* Email */
-.contato-section .bi-envelope-fill:hover {
-  color: #ff9800;
+/* INPUT GROUP */
+.input-group-custom {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-/* Localização */
-.contato-section .bi-geo-alt-fill:hover {
-  color: #e53935;
+/* ÍCONE */
+.input-group-custom i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ff7a00;
+  font-size: 1.2rem;
+}
+
+/* INPUT / SELECT / TEXTAREA */
+.input-group-custom input,
+.input-group-custom select,
+.input-group-custom textarea {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  background: #fff;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* TEXTAREA AJUSTE */
+.input-group-custom.textarea textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* HOVER */
+.input-group-custom input:hover,
+.input-group-custom select:hover,
+.input-group-custom textarea:hover {
+  transform: scale(1.02);
+}
+
+/* FOCO */
+.input-group-custom input:focus,
+.input-group-custom select:focus,
+.input-group-custom textarea:focus {
+  box-shadow: 0 0 0 2px #ff7a00;
+}
+
+/* BOTÃO */
+.btn-enviar {
+  width: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 100px;
+  background: linear-gradient(135deg, #00ff15, #ff9f43);
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+/* HOVER BOTÃO */
+.btn-enviar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 .logo-footer{
