@@ -172,21 +172,22 @@ body {
 .btn-success:hover {
   transform: scale(1.05);
 }
-
-
 /* ======================================================
                     CARDS PRODUTOS
 ====================================================== */
 
 .card-custom {
+
+   width: 326px;
+  height: 200px;
   background: linear-gradient(135deg, #ff7a00, #ff9f43);
   color: #fff;
   border-radius: 18px;
   overflow: hidden;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
-/* Hover */
+/* Hover do card */
 .card-custom:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.35);
@@ -194,11 +195,11 @@ body {
 
 /* Imagem */
 .card-custom img {
-  height: 300px;
+  height: 150px;
   object-fit: cover;
 }
 
-/* Layout botões */
+/* Botões layout */
 .card-custom .d-flex {
   gap: 8px;
 }
@@ -207,25 +208,104 @@ body {
   flex: 1;
 }
 
-.card-custom .btn-comprar {
+/* Botão comprar */
+.btn-comprar {
   background: #00c853;
   color: #fff;
   border: none;
+  transition: 0.3s;
 }
 
-.card-custom .btn-comprar:hover {
+.btn-comprar:hover {
   background: #00e676;
 }
 
-.card-custom .btn-detalhes {
+/* Botão detalhes */
+.btn-detalhes {
   background: #1c1c1c;
   color: #fff;
   border: none;
+  transition: 0.3s;
 }
 
-.card-custom .btn-detalhes:hover {
+.btn-detalhes:hover {
   background: #333;
 }
+
+
+/* ======================================================
+                        MODAL
+====================================================== */
+
+/* Tamanho do modal */
+.modal-dialog {
+  max-width: 800px;
+}
+
+/* Estrutura */
+.modal-content {
+  background: #1c1c1c;
+  color: #fff;
+  border-radius: 15px;
+}
+
+/* Header */
+.modal-header {
+  border-bottom: 1px solid #333;
+}
+
+.modal-title {
+  color: #ff9f43;
+}
+
+/* Botão fechar */
+.btn-close {
+  filter: invert(1);
+}
+
+
+/* ======================================================
+                    IMAGEM DO MODAL
+====================================================== */
+
+.modal-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+/* ======================================================
+                        TEXTO
+====================================================== */
+
+.modal-desc {
+  color: #ccc;
+}
+
+.modal-preco {
+  font-size: 1.5rem;
+  color: #00e676 !important;
+}
+
+
+/* ======================================================
+                        BOTÃO
+====================================================== */
+
+#btnPedido {
+  background: #25D366;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#btnPedido:hover {
+  background: #1ebe5d;
+  transform: scale(1.05);
+}
+
 
 
 /* ======================================================
@@ -340,4 +420,9 @@ body {
 /* Localização */
 .contato-section .bi-geo-alt-fill:hover {
   color: #e53935;
+}
+
+.logo-footer{
+font-size: 70px;
+  cursor: default;
 }
