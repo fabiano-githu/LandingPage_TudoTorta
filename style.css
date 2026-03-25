@@ -1,184 +1,167 @@
-
-
-
-/* ====================================================== 
-                         STYLE BODY 
-======================================================== */
-.body{
-    background-color:#1f1f1f ;
-
-
-
-}
-
-
-
-/* ==================================================== 
-                          NAVBAR 
+/* ======================================================
+                        GLOBAL
 ====================================================== */
+
+/* Reset básico e corpo */
+body {
+  background-color: #1f1f1f;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ======================================================
+                        TIPOGRAFIA
+====================================================== */
+
+/* Fonte destaque (escrita à mão) */
+.fonte-caneta {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Fonte padrão do site */
+.font-padrao {
+  font-family: "Fjalla One", sans-serif;
+}
+
+/* Cor auxiliar */
+.text-brown {
+  color: #5a2d0c;
+}
+
+
+/* ======================================================
+                        NAVBAR
+====================================================== */
+
+/* Estrutura */
 .navbar {
-  padding-top: 0px;
-  padding-bottom: 0px;
+  height: 100px;
+  padding: 0;
+}
+
+/* Links */
+.navbar .nav-link {
+  font-size: 14px;
+  font-family: "Fjalla One", sans-serif;
+  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 0.3s;
+}
+
+/* Hover */
+.navbar .nav-link:hover {
+  background: linear-gradient(135deg, #ff9f43, #ffd166);
+  -webkit-background-clip: text;
+  transform: translateY(-2px);
 }
 
 
+/* ======================================================
+                        LOGO
+====================================================== */
 
-/* =================================================== 
-                         LOGO 
-===================================================== */
-/* Estilo principal da logo */
 .logo-marca {
-  font-family: "Merienda", cursive; /* Fonte personalizada */
-  font-weight: 400;
-  font-style: normal;
-  font-size: 30px; /* Tamanho do texto */
-  line-height: 1; /* Evita aumentar altura da navbar */
-  display: flex; /* Alinhamento horizontal */
-  align-items: center; /* Centraliza verticalmente */
-  transition: all 0.3s ease; /* Animação suave */
-  cursor: pointer; /* Cursor de clique */
+  font-family: "Merienda", cursive;
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
-/* Estilo do ícone dentro da logo */
+/* Ícone */
 .logo-marca i {
   background: linear-gradient(135deg, #ff7a00, #ff9f43);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-
-/* ================================================= 
-                     HOVER LOGO 
-==================================================== */
-/* Efeito ao passar o mouse na logo */
+/* Hover */
 .logo-marca:hover {
-  transform: scale(1.05); /* Aumenta levemente */
+  transform: scale(1.05);
 }
 
-/* Efeito no ícone ao passar o mouse */
 .logo-marca:hover i {
-  transform: rotate(10deg) scale(1.15); /* Gira e aumenta */
-  color: #ffca2c; /* Amarelo mais vivo */
+  transform: rotate(10deg) scale(1.15);
 }
 
 
-/* =============================================== 
-                  BOTÃO HAMBÚRGUER 
-================================================== */
-/* Define a cor da borda do botão mobile */
-.navbar-toggler {
-  border-color:orange; /* Amarelo Bootstrap */
-}
+/* ======================================================
+                BOTÃO HAMBÚRGUER
+====================================================== */
 
-/* Substitui o ícone padrão por linhas amarelas */
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='orange' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-
-/* ============================================== 
-                AJUSTES OPCIONAIS 
-================================================= */
-/* Remove a borda do botão (visual mais moderno) */
 .navbar-toggler {
   border: none;
 }
 
-/* Remove o efeito azul ao clicar (focus) */
 .navbar-toggler:focus {
   box-shadow: none;
 }
 
-
-
-/*============================================ 
-                    NAV LINKS 
-==============================================*/
-/* Cor padrão */
-.navbar .nav-link {
-  font-size: 14px;
-  font-family: "Fjalla One", sans-serif;
-  background: linear-gradient(135deg, #ff7a00, #ff9f43);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease;
-}
-
-/* Hover (mouse em cima) */
-.navbar .nav-link:hover {
-  background: linear-gradient(135deg, #ff9f43, #ffd166);
-  background-clip: text;
-  -webkit-background-clip: text;
-
-  transform: translateY(-2px);
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='orange' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 
+/* ======================================================
+                    HERO SECTION
+====================================================== */
 
-/* ============================================
-   HERO SECTION - FUNDO ANIMADO + GLASSMORPHISM
-   ============================================*/
 .hero-glass {
+  height: 600px;
   position: relative;
   overflow: hidden;
 }
 
+/* Fundo imagem */
 .hero-glass::before {
   content: "";
   position: absolute;
   inset: 0;
-
   background: url("imagens/Coxinha-low-carb-na-airfryer.jpg.webp") center/cover no-repeat;
   opacity: 0.3;
-
-  z-index: 0;
 }
 
+/* Conteúdo */
 .hero-glass > * {
   position: relative;
   z-index: 1;
 }
 
-/* ANIMAÇÃO DO FUNDO */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* CAIXA DE VIDRO */
+/* Glassmorphism */
 .glass-box {
   padding: 40px;
   border-radius: 20px;
   backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.08);
-  border: 10px solid rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.2);
   color: #fff;
   max-width: 1000px;
   width: 90%;
   box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
-/* HOVER SUAVE */
+/* Hover */
 .glass-box:hover {
   transform: scale(1.03);
 }
 
-/* TÍTULO */
+/* Título */
 .glass-box h1 {
   background: linear-gradient(135deg, #ff7a00, #ff9f43);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 
+/* ======================================================
+                        BOTÕES
+====================================================== */
 
-/* =======================================
-   BOTÃO DE AÇÃO (CTA - CALL TO ACTION)
-   =======================================*/
+/* Botão principal (WhatsApp) */
 .btn-success {
   background: linear-gradient(45deg, #25D366, #1ebe5d);
   border: none;
@@ -188,109 +171,119 @@
 
 .btn-success:hover {
   transform: scale(1.05);
-  background: linear-gradient(45deg, #1ebe5d, #25D366);
 }
 
 
+/* ======================================================
+                    CARDS PRODUTOS
+====================================================== */
 
-/* ====================================== 
-              FUNDO DOS CARDS 
- ======================================== */
 .card-custom {
   background: linear-gradient(135deg, #ff7a00, #ff9f43);
   color: #fff;
-  border: none;
   border-radius: 18px;
   overflow: hidden;
-  transition: 0.3s ease;
+  transition: 0.3s;
 }
 
-/* HOVER DO CARD */
+/* Hover */
 .card-custom:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.35);
 }
 
-/* IMAGEM */
+/* Imagem */
 .card-custom img {
   height: 300px;
   object-fit: cover;
 }
 
-/* TEXTO */
-.card-custom h5 {
-  font-size: 1.2rem;
-  font-weight: 600;
+/* Layout botões */
+.card-custom .d-flex {
+  gap: 8px;
 }
 
-.card-custom p {
-  font-size: 0.95rem;
+.card-custom .btn {
+  flex: 1;
 }
 
-/* PREÇO */
-.card-custom .text-success {
-  color: #00ff88 !important;
-  font-size: 1.1rem;
-}
-
-/* ==================================== 
-                 BOTÕES 
-====================================== */
-
-/* BOTÃO COMPRAR */
-.btn-comprar {
+.card-custom .btn-comprar {
   background: #00c853;
   color: #fff;
   border: none;
-  font-size: 0.9rem;
-  padding: 8px 10px;
-  border-radius: 10px;
-  transition: 0.3s;
 }
 
-/* HOVER COMPRAR */
-.btn-comprar:hover {
+.card-custom .btn-comprar:hover {
   background: #00e676;
-  transform: scale(1.05);
 }
 
-/* BOTÃO DETALHES */
-.btn-detalhes {
+.card-custom .btn-detalhes {
   background: #1c1c1c;
   color: #fff;
   border: none;
-  font-size: 0.9rem;
-  padding: 8px 10px;
-  border-radius: 10px;
+}
+
+.card-custom .btn-detalhes:hover {
+  background: #333;
+}
+
+
+/* ======================================================
+                    SECTION SOBRE
+====================================================== */
+
+/* Fundo */
+.sobre-section {
+  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+}
+
+/* Texto */
+.texto-sobre {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2c2c2c;
+  text-align: center;
+  font-family: "Fjalla One", sans-serif;
+}
+
+/* Destaque */
+.destaque {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #4a2500;
+}
+
+
+/* ======================================================
+                    CARDS SOBRE
+====================================================== */
+
+.card-icone {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 20px;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+/* Ícones */
+.card-icone i {
+  font-size: 3rem;
+  color: #ff7a00;
+  margin-bottom: 10px;
   transition: 0.3s;
 }
 
-/* HOVER DETALHES */
-.btn-detalhes:hover {
-  background: #333;
-  transform: scale(1.05);
+/* Hover */
+.card-icone:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
-/* TAMANHO DOS BOTÕES (lado a lado) */
-.card-custom .btn {
-  flex: 1; /* divide espaço automaticamente */
-}
-
-/* ESPAÇAMENTO ENTRE BOTÕES */
-.card-custom .d-flex {
-  display: flex;
-  flex-direction: row; /* ✔ lado a lado */
-  gap: 8px;
-}
-/* ========================================
-               RESPONSIVO 
-  ======================================== */
-@media (max-width: 576px) {
-  .card-custom img {
-    height: 140px;
-  }
-
-  .card-custom h5 {
-    font-size: 1rem;
-  }
+.card-icone:hover i {
+  color: #d35400;
 }
