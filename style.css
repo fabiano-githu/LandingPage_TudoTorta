@@ -489,3 +489,107 @@ body {
 font-size: 70px;
   cursor: default;
 }
+
+
+
+
+
+/* =========================================
+               CSS FOOTER
+========================================= */
+/* FUNDO */
+.footer {
+  color: #fff;
+}
+
+/* TEXTO */
+.footer p,
+.footer h6 {
+  color: #fff;
+}
+
+/* REDES SOCIAIS */
+.social-icon {
+  font-size: 1.8rem;
+  color: #ff7a00;
+  transition: 0.3s;
+}
+
+/* HOVER REDES */
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.2);
+  color: #faf1f1;
+}
+
+/* PARCEIROS */
+.parceiro {
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #ff7a00;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* HOVER PARCEIROS */
+.parceiro:hover {
+  background: #fff;
+  color: #ff7a00;
+  transform: scale(1.1);
+}
+
+
+
+/* =========================================
+               CSS LOGO-FOOTER
+========================================= */
+/* CONTAINER CENTRALIZADO */
+.logo-footer {
+  font-family: "Merienda", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* TAMANHO */
+  font-size: 5.6rem; /* diminui aqui se quiser */
+  font-weight: bold;
+
+  /* COR */
+  color: #fff !important;
+  text-decoration: none;
+
+  /* SUAVIDADE */
+  transition: 0.3s ease;
+}
+
+/* ÍCONE */
+.logo-footer i {
+  font-size: 5.3rem;
+  color: #ff7a00;
+  transition: 0.3s ease;
+}
+
+/* HOVER (efeito profissional) */
+.logo-footer:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* HOVER NO ÍCONE */
+.logo-footer:hover i {
+  transform: rotate(10deg) scale(1.2);
+}
+
+.copyright {
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+.copyright:hover {
+  color: #611010;
+  letter-spacing: 1px;
+}

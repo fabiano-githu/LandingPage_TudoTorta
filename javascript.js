@@ -182,3 +182,6 @@ ${mensagem}`;
   });
 
 });
+
+// Atualiza automaticamente o ano
+document.getElementById("ano").textContent = new Date().getFullYear();
