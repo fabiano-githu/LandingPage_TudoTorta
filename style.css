@@ -549,227 +549,170 @@ body {
     padding: 15px;
   }
 }
-/* ======================================================
-                SECTION SOBRE - BASE
-====================================================== */
-.sobre-section {
-  height: 1100px;
-  background: linear-gradient(135deg, #1a1a1a, #111);
-  position: relative;
-  overflow: hidden;
-}
+/* =========================================
+        SECTION SOBRE
+========================================= */
 
-/* Efeito leve de brilho no fundo */
-.sobre-section::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(255,122,0,0.25), transparent 70%);
-  top: -100px;
-  left: -100px;
-  filter: blur(80px);
-}
-
-/* ======================================================
-                TEXTO / HEADER
-====================================================== */
-
-.logo-marca {
-  font-size: 3.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  transition: 0.3s ease;
-}
-
-.logo-marca:hover {
-  color: #ff7a00 !important;
-  transform: scale(1.05);
-}
-
-/* Título principal */
-.titulo-com-icone {
-  font-size: 2.6rem;
-  font-weight: 500;
-  color: #fff;
-}
-
-/* Ícone do título */
-.titulo-com-icone .icone {
-  color: #ff7a00;
-  font-size: 1.6rem;
-}
-
-/* Parágrafo */
-.secao-sobre {
-  max-width: 650px;
-  color: #cfcfcf;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* ======================================================
-                CARDS
-====================================================== */
-
-.card-sobre {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.05);
-  transition: all 0.35s ease;
-  cursor: pointer;
-}
-
-/* Hover moderno */
-.card-sobre:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-  border: 1px solid rgba(255,122,0,0.3);
-}
-
-/* Ícones dos cards */
-.icone-card {
-  font-size: 2.2rem;
-  color: #ff7a00;
-  transition: 0.3s;
-}
-
-/* animação no hover */
-.card-sobre:hover .icone-card {
-  transform: scale(1.2) rotate(5deg);
-}
-
-/* Título do card */
-.card-sobre h5 {
-  margin-bottom: 8px;
-}
-
-/* Texto do card */
-.card-sobre p {
-  color: #bfbfbf;
-  font-size: 0.9rem;
-}
-
-/* ======================================================
-                AJUSTES FINOS
-====================================================== */
-
-/* Centralização elegante do texto */
-.texto-sobre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Espaçamento entre título e texto */
-.titulo-com-icone span {
-  display: inline-block;
-}
-
-/* ======================================================
-                MICRO INTERAÇÕES
-====================================================== */
-
-/* Fade-in suave ao carregar */
-.sobre-section {
-  animation: fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ================================
-   CONTATO & PEDIDOS (ISOLADO)
-   ================================ */
-
-.cx-contato-wrapper {
-  max-width: 1200px;
+.cx-sobre-wrapper {
   height: 800px;
-}
-
-/* Título */
-.cx-titulo {
-  font-family: 'Dancing Script', cursive;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #ffffff;
-}
-
-/* Cards */
-.cx-card {
-  background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
-  padding: 2rem;
-  border-radius: 14px;
+  background: linear-gradient(135deg, #0e0c0a, #ff9f43);
+  border-radius: 20px;
+  padding: 5px 30px;
   color: #fff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+ 
+  
 }
 
-.cx-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+/* TÍTULO */
+.cx-sobre-titulo {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-/* Card destaque (pedido) */
-.cx-card-destaque {
-  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+/* DESTAQUE DO NOME */
+.cx-destaque {
+  background: #fff;
+  color: #ff7a00;
+  padding: 4px 12px;
+  border-radius: 8px;
 }
 
-/* Subtítulo */
-.cx-subtitulo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+/* TEXTO */
+.cx-sobre-texto {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  margin-bottom: 12px;
 }
 
-/* Texto */
-.cx-texto {
-  font-size: 1rem;
+/* =========================================
+        CARDS (DIFERENCIAIS)
+========================================= */
+
+.cx-sobre-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s ease;
+  text-align: center;
+  height: 100%;
+}
+
+/* HOVER */
+.cx-sobre-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ÍCONE */
+.cx-sobre-card i {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* TÍTULO CARD */
+.cx-sobre-card h6 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+/* TEXTO CARD */
+.cx-sobre-card p {
+  font-size: 0.85rem;
+  margin: 0;
   opacity: 0.9;
 }
 
-/* Lista */
-.cx-lista {
-  list-style: none;
-  padding: 0;
-  margin: 1.2rem 0;
-}
 
-.cx-lista li {
-  margin-bottom: 10px;
-  font-size: 0.95rem;
-}
 
-/* Botões base */
-.cx-btn {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 8px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
+/* =========================================
+        SECTION CONTATO / PEDIDOS
+========================================= */
 
-/* Botão contato */
-.cx-btn-outline {
-  border: 2px solid #ff9f43;
-  color: #ff9f43;
-}
-
-.cx-btn-outline:hover {
-  background: #ff9f43;
+.cx-contato-wrapper {
+  height: 800px;
+  background: linear-gradient(135deg, #0e0c0a, #ff9f43);
+  border-radius: 20px;
   color: #fff;
 }
 
-/* Botão WhatsApp */
+/* LOGO */
+.cx-contato-wrapper .logo-marca {
+  font-size: 4.6rem;
+  font-weight: 700;
+  color: #fff !important;
+}
+
+/* TÍTULO */
+.cx-titulo {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* SUBTÍTULO */
+.cx-subtitulo {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* TEXTO */
+.cx-texto {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* CARDS */
+.cx-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  transition: 0.3s;
+}
+
+/* HOVER CARD */
+.cx-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* LISTA */
+.cx-lista {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.cx-lista li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* BOTÕES */
+.cx-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* BOTÃO OUTLINE */
+.cx-btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.cx-btn-outline:hover {
+  background: #fff;
+  color: #ff7a00;
+}
+
+/* BOTÃO WHATSAPP */
 .cx-btn-whatsapp {
   background: #25d366;
   color: #fff;
@@ -777,8 +720,13 @@ body {
 
 .cx-btn-whatsapp:hover {
   background: #1ebe5d;
+  transform: translateY(-2px);
 }
 
+/* DESTAQUE */
+.cx-card-destaque {
+  border: 2px solid rgba(255,255,255,0.3);
+}
 
 /* =========================================
         BOTÃO FLUTUANTE WHATSAPP
