@@ -57,6 +57,70 @@ body {
   transform: translateY(-2px);
 }
 
+/* =========================================
+        DROPDOWN CARDÁPIO - MODERNO
+========================================= */
+
+.dropdown-menu {
+  background: #ff7a00;
+  border: none;
+  border-radius: 100px;
+  padding: 8px;
+  min-width: 200px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* ITEM */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* LINHA ANIMADA (efeito premium) */
+.dropdown-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+  transition: width 0.3s ease;
+}
+
+/* HOVER PRINCIPAL */
+.dropdown-item:hover {
+  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+  color: #fff;
+  transform: translateX(6px);
+}
+
+/* ATIVA LINHA */
+.dropdown-item:hover::before {
+  width: 100%;
+}
+
+/* ÍCONE */
+.dropdown-item i {
+  font-size: 0.9rem;
+  color: #ff7a00;
+  transition: all 0.25s ease;
+}
+
+/* ÍCONE NO HOVER */
+.dropdown-item:hover i {
+  color: #fff;
+  transform: scale(1.2) rotate(5deg);
+}
+
 
 /* ======================================================
                         LOGO
@@ -622,172 +686,157 @@ body {
   }
 }
 
-/* ======================================================
-                    CSS SECTION CONTATOS
-====================================================== */
-/* FUNDO DA SECTION */
-.contato-section {
-  background: #fff;
+/* ================================
+   CONTATO & PEDIDOS (ISOLADO)
+   ================================ */
+
+.cx-contato-wrapper {
+  max-width: 1200px;
+  height: 800px;
 }
 
-/* INPUTS MAIS BONITOS */
-.form-control {
-  border-radius: 10px;
-  padding: 10px;
+/* Título */
+.cx-titulo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-/* FOCO NOS INPUTS */
-.form-control:focus {
-  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.3);
-  border-color: #ff7a00;
+/* Cards */
+.cx-card {
+  background: linear-gradient(135deg, #1f1f1f, #2b2b2b);
+  padding: 2rem;
+  border-radius: 14px;
+  color: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
 }
 
+.cx-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
 
-/* =========================================
-        HOVER NOS ÍCONES - CONTATO
-========================================= */
-
-/* FUNDO */
-.contato-section{
-  height: 900px;
+/* Card destaque (pedido) */
+.cx-card-destaque {
   background: linear-gradient(135deg, #ff7a00, #ff9f43);
 }
 
-/* BOX */
-.form-box {
-  max-width: 500px;
+/* Subtítulo */
+.cx-subtitulo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Texto */
+.cx-texto {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Lista */
+.cx-lista {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0;
+}
+
+.cx-lista li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+/* Botões base */
+.cx-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Botão contato */
+.cx-btn-outline {
+  border: 2px solid #ff9f43;
+  color: #ff9f43;
+}
+
+.cx-btn-outline:hover {
   background: #ff9f43;
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-}
-
-/* HOVER */
-.info-box i:hover {
-  transform: scale(2.2);
-  opacity: 1.8;
-}
-
-/* INPUT GROUP */
-.input-group-custom {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-/* ÍCONE */
-.input-group-custom i {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ff7a00;
-  font-size: 1.2rem;
-}
-
-/* INPUT / SELECT / TEXTAREA */
-.input-group-custom input,
-.input-group-custom select,
-.input-group-custom textarea {
-  width: 100%;
-  padding: 12px 15px 12px 45px;
-  border: none;
-  border-radius: 12px;
-  outline: none;
-  background: #fff;
-  transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-/* TEXTAREA AJUSTE */
-.input-group-custom.textarea textarea {
-  height: 100px;
-  resize: none;
-}
-
-/* HOVER */
-.input-group-custom input:hover,
-.input-group-custom select:hover,
-.input-group-custom textarea:hover {
-  transform: scale(1.02);
-}
-
-/* FOCO */
-.input-group-custom input:focus,
-.input-group-custom select:focus,
-.input-group-custom textarea:focus {
-  box-shadow: 0 0 0 2px #ff7a00;
-}
-
-/* BOTÃO */
-.btn-enviar {
-  width: 20px;
-  padding: 12px;
-  border: none;
-  border-radius: 100px;
-  background: linear-gradient(135deg, #00ff15, #ff9f43);
   color: #fff;
-  font-weight: bold;
-  transition: 0.3s;
 }
 
-/* HOVER BOTÃO */
-.btn-enviar:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+/* Botão WhatsApp */
+.cx-btn-whatsapp {
+  background: #25d366;
+  color: #fff;
 }
 
-.logo-footer{
-font-size: 70px;
-  cursor: default;
+.cx-btn-whatsapp:hover {
+  background: #1ebe5d;
 }
 
 
 /* =========================================
-        CSS BOTÃO FLUTUANTE ZAP
+        BOTÃO FLUTUANTE WHATSAPP
 ========================================= */
+
 .btn-whatsapp {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-
-  width: 50px;
-  height: 50px;
-
-  background: #25D366;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
   color: #fff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   border-radius: 50%;
-  font-size: 28px;
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
   z-index: 999;
 
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Ícone centralizado */
+.btn-whatsapp i {
+  font-size: 1.6rem;
 }
 
 /* HOVER */
 .btn-whatsapp:hover {
-  transform: scale(1.1);
-  background: #1ebe5d;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-/* MOBILE */
-@media (max-width: 576px) {
-  .btn-whatsapp {
-    width: 55px;
-    height: 55px;
-    font-size: 24px;
-    bottom: 15px;
-    right: 15px;
+/* Efeito pulse leve */
+.btn-whatsapp::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.4);
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
   }
 }
-
 
 
 /* =========================================

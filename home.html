@@ -37,7 +37,9 @@
     </button>
 
     <div class="collapse navbar-collapse" id="menuNavbar">
+      
       <ul class="navbar-nav ms-auto text-lg-start">
+
         <li class="nav-item">
           <a class="nav-link px-3" href="#produtos">Salgados</a>
         </li>
@@ -48,19 +50,32 @@
           </a>
 
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#tortas">Torta Salgada Retangular</a></li>
-            <li><a class="dropdown-item" href="#salgados">Torta Salgada Redonda</a></li>
+            <li>
+              <a class="dropdown-item" href="#tortas">
+                <i class="bi bi-square-fill"></i>
+                Torta Salgada Retangular
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#salgados">
+                <i class="bi bi-circle-fill"></i>
+                Torta Salgada Redonda
+              </a>
+            </li>
           </ul>
-        </li>
+        </li> <!-- ✅ FECHAMENTO CORRIGIDO -->
 
         <li class="nav-item">
           <a class="nav-link px-3" href="#sobre-section">Sobre</a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link px-3" href="#contato">Contato</a>
         </li>
         
-     </ul>
+      </ul>
+
     </div>
 
   </div>
@@ -175,175 +190,70 @@
 </section>
 
 
-<!-- ================= SECTION SOBRE ================= -->
-<section id="sobre-section" class="sobre-section py-5">
-  <div class="container">
+<!-- ================= SECTION CONTATOS/PEDIDOS ================= -->
 
-    <!-- HEADER -->
-    <div class="text-center mb-5 px-2 px-md-5 texto-sobre">
+<section class="cx-contato-wrapper container my-5 py-5 " id="contato">
 
-      <a class="logo-marca navbar-brand d-inline-block text-white mb-3" href="#">
-        Tudo<i class="fa-solid fa-chart-pie mx-1"></i>Torta
-      </a>
 
-      <h2 class="titulo-com-icone d-flex justify-content-center align-items-center gap-2 mb-3">
-        <i class="icone bi bi-cupcake-fill"></i>
-        <span>Tortas artesanais e salgados feitos com carinho</span>
-      </h2>
-
-      <p class="secao-sobre mx-auto">
-        Especialistas na produção de tortas artesanais e salgados, preparados com ingredientes selecionados e atenção em cada detalhe.
-        Nosso compromisso é oferecer produtos frescos, saborosos e com aquele toque caseiro que transforma cada momento em uma experiência especial.
-      </p>
-
-    </div>
-
-    <!-- CARDS -->
-    <div class="row g-4 text-center">
-
-      <!-- CARD 1 -->
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card card-sobre border-0 shadow-sm h-100 p-4 rounded-4 text-white">
-          <i class="bi bi-emoji-heart-eyes-fill icone-card mb-3"></i>
-          <h5 class="fw-bold">Feito com Amor</h5>
-          <p class="mb-0">Cada produto é preparado com dedicação e carinho.</p>
-        </div>
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card card-sobre border-0 shadow-sm h-100 p-4 rounded-4 text-white">
-          <i class="bi bi-basket-fill icone-card mb-3"></i>
-          <h5 class="fw-bold">Ingredientes Selecionados</h5>
-          <p class="mb-0">Qualidade garantida em cada detalhe.</p>
-        </div>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="col-12 col-sm-6 col-lg-4 mx-sm-auto">
-        <div class="card card-sobre border-0 shadow-sm h-100 p-4 rounded-4 text-white">
-          <i class="bi bi-emoji-smile-fill icone-card mb-3"></i>
-          <h5 class="fw-bold">Sabor que Encanta</h5>
-          <p class="mb-0">Uma experiência deliciosa a cada mordida.</p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- =================SECTION CONTATOS ==============-->
-<section class="contato-section py-5" id="contato">
-  <div class="container">
-
-    <!-- TÍTULO -->
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Peça sua Torta 🍰</h2>
-      <p class="text-muted">Atendimento rápido e direto pelo WhatsApp</p>
-    </div>
-
-    
-    <a class="logo-marca navbar-brand mx-auto" href="#">
-      Tudo<i class="fa-solid fa-chart-pie mx-1"></i>Torta
+  <nav class="navbar d-flex justify-content-center">
+    <a class="navbar-brand logo-marca" href="#">
+      Tudo <i class="fa-solid fa-chart-pie mx-1"></i> Torta
     </a>
+  </nav>
 
-    <div class="row g-4">
 
-      <!-- 📌 INFORMAÇÕES -->
-      <div class="col-lg-5">
+  <h2 class="cx-titulo text-center mb-5">Contato e Pedidos</h2>
 
-        <div class=" p-4 h-100">
+  
+  
 
-          <h5 class="mb-4">Contato</h5>
+  <div class="row g-4">
 
-          <p><i class="bi bi-whatsapp text-success"></i> (21) 99999-9999</p>
+    <!-- CONTATO -->
+    <div class="col-md-6">
+      <div class="cx-card cx-card-contato h-100">
+        <h4 class="cx-subtitulo">Fale Conosco</h4>
+        <p class="cx-texto">Entre em contato para dúvidas, encomendas ou informações.</p>
 
-          <p>
-            <i class="bi bi-instagram text-danger"></i> 
-            @suaempresa
-          </p>
+        <ul class="cx-lista">
+          <li>📞 (21) 99999-9999</li>
+          <li>✉️ contato@seudominio.com</li>
+          <li>📍 Rio de Janeiro - RJ</li>
+        </ul>
 
-          <p>
-            <i class="bi bi-geo-alt text-warning"></i> 
-            Rio de Janeiro - RJ
-          </p>
-
-          <hr>
-
-          <p class="small text-muted">
-            Faça seu pedido preenchendo o formulário ao lado. 
-            Você será redirecionado automaticamente para o WhatsApp.
-          </p>
-
-        </div>
-
+        <a href="#" class="cx-btn cx-btn-outline mt-3">Entrar em contato</a>
       </div>
-
-      <!-- 📌 FORMULÁRIO -->
-      <div class="col-lg-7">
-
-        <div class="form-box bg-dark p-4">
-
-          <form id="formPedido">
-
-            <div class="row">
-
-              <div class="col-md-6 mb-3">
-                <input type="text" id="nome" class="form-control" placeholder="Seu nome">
-              </div>
-
-              <div class="col-md-6 mb-3">
-                <input type="text" id="whatsapp" class="form-control" placeholder="Seu WhatsApp">
-              </div>
-
-            </div>
-
-            <div class="row">
-
-              <div class="col-md-6 mb-3">
-                <input type="text" id="sabor" class="form-control" placeholder="Sabor da torta">
-              </div>
-
-              <div class="col-md-6 mb-3">
-                <select id="tamanho" class="form-select">
-                  <option>20cm</option>
-                  <option>30cm</option>
-                  <option>40cm</option>
-                </select>
-              </div>
-
-            </div>
-
-            <div class="mb-3">
-              <textarea id="mensagem" class="form-control" placeholder="Observações"></textarea>
-            </div>
-
-            <button type="submit" class="btn-enviar btn-success w-100 btn-pedido">
-              Fazer Pedido no WhatsApp
-            </button>
-
-            <!-- MENSAGEM DE ERRO -->
-            <div id="erroForm" class="text-danger mt-2 d-none">
-              Preencha nome e WhatsApp!
-            </div>
-
-          </form>
-
-        </div>
-
-      </div>
-
     </div>
+
+    <!-- PEDIDOS -->
+    <div class="col-md-6">
+      <div class="cx-card cx-card-destaque h-100">
+        <h4 class="cx-subtitulo">Faça seu Pedido</h4>
+        <p class="cx-texto">Peça agora mesmo nossos salgados e tortas artesanais.</p>
+
+        <ul class="cx-lista">
+          <li>✔ Produção fresca diária</li>
+          <li>✔ Entrega rápida</li>
+          <li>✔ Qualidade garantida</li>
+        </ul>
+
+        <a href="https://wa.me/5521999999999" target="_blank" class="cx-btn cx-btn-whatsapp mt-3">
+          Pedir pelo WhatsApp
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
 
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a href="https://wa.me/5521999999999" 
+   id="btnWhats" 
+   class="btn-whatsapp d-flex align-items-center justify-content-center"
+   target="_blank">
 
-<!-- ================= BOTÃO FLUTUANTE ZAP ================= -->
-<a href="#" id="btnWhats" class="btn-whatsapp" target="_blank">
-  <i class="bi bi-whatsapp"></i>
+  <i class="bi bi-whatsapp fs-4"></i>
 </a>
-
 
 
 <!-- ================= SECTION FOOTER ================= -->
