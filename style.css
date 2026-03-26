@@ -232,50 +232,125 @@ body {
                     SECTION SOBRE
 ====================================================== */
 
-/* Fundo */
-.sobre-section {
-  background: linear-gradient(135deg, #ff7a00, #ff9f43);
-}
+/* ==============================
+   SEÇÃO SOBRE - ESTILO MODERNO
+   ============================== */
 
-/* Texto */
-.texto-sobre {
-  max-width: 700px;
+/* Contêiner do texto */
+.text-center.mb-5.px-2.px-md-5 {
+  max-width: 900px;
   margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #2c2c2c;
+  padding: 3rem 1rem;
+}
+
+/* Título com ícone */
+.texto-sobre .titulo-com-icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;              /* espaço entre ícone e texto */
+  font-family: 'Dancing Script', cursive;
+  font-weight: 1200px;
+  font-size: 2.8rem;        /* base */
+  color:orange;
+  transition: all 0.4s ease;
+}
+
+/* Ícone do título */
+.texto-sobre .titulo-com-icone .icone {
+  font-size: 1.2rem;
+  color: #FF7A00;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+/* Hover moderno no título */
+.texto-sobre .titulo-com-icone:hover {
+  transform: scale(1.05);
+  color: #f1f0ef;
+}
+
+.texto-sobre .titulo-com-icone:hover .icone {
+  transform: rotate(15deg) scale(1.2);
+  color: #FF9F43;
+}
+
+/* ================================
+   SEÇÃO SOBRE MODERNA (Bootstrap ready)
+   ================================ */
+.secao-sobre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+  width: 100%;
+  max-width: 4500px;          /* limite de largura confortável */
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #1f1f1f, #2b2b2b); /* fundo degradê moderno */
+  color: #ffffff;
   text-align: center;
-  font-family: "Fjalla One", sans-serif;
+  box-sizing: border-box;
+  border-radius: 100px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Destaque */
-.destaque {
-  display: block;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-  color: #4a2500;
+/* Hover leve na seção inteira */
+.secao-sobre:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
+/* Títulos dentro da seção */
+.secao-sobre h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 100px;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
 
+/* Parágrafos estilizados */
+.secao-sobre {
+  font-family:'Montserrat', sans-serif ;
+  font-size: 1.15rem;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  max-width:2500px;
+  margin: 1rem 0;
+  color: orange;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover sutil nos parágrafos */
+.secao-sobre p:hover {
+  transform: translateY(-3px);
+  color: #ff9f43; /* destaque moderno */
+}
 /* ======================================================
                     CARDS SOBRE
 ====================================================== */
 
 .card-icone {
-  background: #ffffff;
-  padding: 25px;
+  background:#ff9f43;
+  padding:10px;
   border-radius: 20px;
   transition: 0.3s;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  height: 100%;
+  box-shadow: 0 1px 20px rgba(221, 214, 214, 0.1);
+  height: 50%;
+  margin-top: -80px; /* ajusta aqui: -30, -60, etc */
 }
+
 
 /* Ícones */
 .card-icone i {
   font-size: 3rem;
-  color: #ff7a00;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   transition: 0.3s;
+  border: solid 1px;
 }
 
 /* Hover */
