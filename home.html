@@ -152,98 +152,127 @@
   </div>
 </section>
 
-<!-- =================SECTION CONTATOS ==============-->
-<section class="contato-section py-5" id="contato">
+
+<!-- ================= CONTATO ================= -->
+<section class="contato-section">
   <div class="container">
 
     <!-- TÍTULO -->
     <div class="text-center mb-5">
-      <h2 class="fw-bold">Peça sua Torta 🍰</h2>
-      <p class="text-muted">Atendimento rápido e direto pelo WhatsApp</p>
-    </div>
 
     
-    <a class="logo-marca navbar-brand mx-auto" href="#">
-      Tudo<i class="fa-solid fa-chart-pie mx-1"></i>Torta
-    </a>
+      <h2 class="text-h2-principal text-white fw-bold">Fale Conosco ou Faça seu Pedido</h2>
+      <p class="text-secondary mb-0">
+        Estamos prontos para te atender com qualidade e rapidez
+      </p>
+    </div>
 
-    <div class="row g-4">
+    <div class="row align-items-center g-4">
 
-      <!-- 📌 INFORMAÇÕES -->
-      <div class="col-lg-5">
+      <!-- INFORMAÇÕES -->
+      <div class="col-12 col-lg-6">
 
-        <div class="info-box p-4 h-100">
+        <div class="info-box text-white">
 
-          <h5 class="mb-4">Contato</h5>
+ 
+          
 
-          <p><i class="bi bi-whatsapp text-success"></i> (21) 99999-9999</p>
+            <a class="logo-marca navbar-brand mx-auto " href="#">
+              Tudo<i class="fa-solid fa-chart-pie fs-1  mx-1"></i>Torta
+            </a>
+          <p>
+            <i class="bi bi-geo-alt me-2"></i>
+            Rua Exemplo, 123 - Centro, Rio de Janeiro
+          </p>
 
           <p>
-            <i class="bi bi-instagram text-danger"></i> 
-            @suaempresa
+            <i class="bi bi-telephone me-2"></i>
+            (21) 99999-9999
           </p>
 
           <p>
-            <i class="bi bi-geo-alt text-warning"></i> 
-            Rio de Janeiro - RJ
+            <i class="bi bi-whatsapp me-2"></i>
+            (21) 98888-8888
           </p>
 
-          <hr>
-
-          <p class="small text-muted">
-            Faça seu pedido preenchendo o formulário ao lado. 
-            Você será redirecionado automaticamente para o WhatsApp.
+          <p>
+            <i class="bi bi-envelope me-2"></i>
+            contato@tudotorta.com
           </p>
+
+          <p>
+            <i class="bi bi-clock me-2"></i>
+            Seg a Sáb: 08h às 18h
+          </p>
+
+          <!-- SOCIAL -->
+          <div class="mt-4 d-flex gap-3">
+
+            <a href="#" class="text-white fs-5">
+              <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="#" class="text-white fs-5">
+              <i class="bi bi-facebook"></i>
+            </a>
+
+            <a href="#" class="text-white fs-5">
+              <i class="bi bi-whatsapp"></i>
+            </a>
+
+          </div>
 
         </div>
 
       </div>
 
-      <!-- 📌 FORMULÁRIO -->
-      <div class="col-lg-7">
+      <!-- FORMULÁRIO -->
+      <div class="col-12 col-lg-6">
 
-        <div class="form-box bg-dark p-4">
+        <div class="form-box">
+
+          <h4 class="text-white mb-4 text-center">Faça seu Pedido</h4>
 
           <form id="formPedido">
 
-            <div class="row">
-
-              <div class="col-md-6 mb-3">
-                <input type="text" id="nome" class="form-control" placeholder="Seu nome">
-              </div>
-
-              <div class="col-md-6 mb-3">
-                <input type="text" id="whatsapp" class="form-control" placeholder="Seu WhatsApp">
-              </div>
-
+            <!-- NOME -->
+            <div class="input-group-custom">
+              <i class="bi bi-person"></i>
+              <input type="text" id="nome" class="form-control" placeholder="Seu nome">
             </div>
 
-            <div class="row">
-
-              <div class="col-md-6 mb-3">
-                <input type="text" id="sabor" class="form-control" placeholder="Sabor da torta">
-              </div>
-
-              <div class="col-md-6 mb-3">
-                <select id="tamanho" class="form-select">
-                  <option>20cm</option>
-                  <option>30cm</option>
-                  <option>40cm</option>
-                </select>
-              </div>
-
+            <!-- WHATSAPP -->
+            <div class="input-group-custom">
+              <i class="bi bi-whatsapp"></i>
+              <input type="tel" id="whatsapp" class="form-control" placeholder="Seu WhatsApp">
             </div>
 
-            <div class="mb-3">
-              <textarea id="mensagem" class="form-control" placeholder="Observações"></textarea>
+            <!-- PRODUTO -->
+            <div class="input-group-custom">
+              <i class="bi bi-bag"></i>
+              <select id="produto" class="form-select">
+                <option selected disabled>Escolha o produto</option>
+                <option>Torta de Frango</option>
+                <option>Torta de Carne</option>
+                <option>Empadão</option>
+                <option>Salgados variados</option>
+              </select>
             </div>
 
-            <button type="submit" class="btn-enviar btn-success w-100 btn-pedido">
+            <!-- MENSAGEM -->
+            <div class="input-group-custom">
+              <i class="bi bi-chat-dots"></i>
+              <textarea id="mensagem" class="form-control" placeholder="Observações (opcional)"></textarea>
+            </div>
+
+            <!-- BOTÃO -->
+            <button type="submit" class="btn btn-enviar mt-2">
+              <i class="bi bi-whatsapp me-2"></i>
               Fazer Pedido no WhatsApp
             </button>
 
-            <!-- MENSAGEM DE ERRO -->
-            <div id="erroForm" class="text-danger mt-2 d-none">
+            <!-- ERRO -->
+            <div id="erroForm" class="erro-form d-none">
               Preencha nome e WhatsApp!
             </div>
 
@@ -253,10 +282,13 @@
 
       </div>
 
+      
+
+
     </div>
+
   </div>
 </section>
-
 <!-- ================= SCRIPTS ================= -->
 
 <!-- Bootstrap JS -->

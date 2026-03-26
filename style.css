@@ -290,117 +290,156 @@ body {
 }
 
 
+
 /* ======================================================
-                    CSS SECTION CONTATOS
+                SEÇÃO CONTATO
 ====================================================== */
-/* FUNDO DA SECTION */
+
 .contato-section {
-  background: #fff;
+  height: 1000px;
+  background-color: #111;
+  padding: 80px 0;
 }
 
-/* INPUTS MAIS BONITOS */
-.form-control {
-  border-radius: 10px;
-  padding: 10px;
+.text-h2-principal {
+  font-family:'Dancing Script', cursive ;
+  font-size: 50px;
 }
 
-/* FOCO NOS INPUTS */
-.form-control:focus {
-  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.3);
-  border-color: #ff7a00;
-}
+/* ======================================================
+                INFORMAÇÕES
+====================================================== */
 
-
-/* =========================================
-        HOVER NOS ÍCONES - CONTATO
-========================================= */
-
-/* FUNDO */
-.contato-section{
-  height: 900px;
-  background: linear-gradient(135deg, #ff7a00, #ff9f43);
-}
-
-/* BOX */
-.form-box {
-  max-width: 500px;
-  background: #ff9f43;
-  backdrop-filter: blur(10px);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-}
-
-/* HOVER */
-.info-box i:hover {
-  transform: scale(2.2);
-  opacity: 1.8;
-}
-
-/* INPUT GROUP */
-.input-group-custom {
-  position: relative;
+.info-box h4 {
+  font-size: 1.4rem;
   margin-bottom: 20px;
 }
 
-/* ÍCONE */
-.input-group-custom i {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ff7a00;
-  font-size: 1.2rem;
+.info-box p {
+  margin-bottom: 12px;
+  color: #ccc;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
 }
 
-/* INPUT / SELECT / TEXTAREA */
+.info-box i {
+  color: #ff7a00;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.info-box i:hover {
+  color: #ffa94d;
+}
+
+/* Redes sociais */
+.info-box a {
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.info-box a:hover {
+  color: #ff7a00;
+}
+
+/* ======================================================
+                FORM BOX
+====================================================== */
+
+.form-box {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+}
+
+/* ======================================================
+                INPUT GROUP
+====================================================== */
+
+.input-group-custom {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+/* Ícones */
+.input-group-custom i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1rem;
+}
+
+/* Inputs */
 .input-group-custom input,
 .input-group-custom select,
 .input-group-custom textarea {
   width: 100%;
-  padding: 12px 15px 12px 45px;
-  border: none;
-  border-radius: 12px;
-  outline: none;
-  background: #fff;
-  transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding-left: 40px;
+
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+
+  background-color: #0f0f0f;
+  color: #fff;
+
+  font-size: 0.95rem;
 }
 
-/* TEXTAREA AJUSTE */
-.input-group-custom.textarea textarea {
-  height: 100px;
-  resize: none;
+/* Placeholder */
+.input-group-custom input::placeholder,
+.input-group-custom textarea::placeholder {
+  color: #777;
 }
 
-/* HOVER */
-.input-group-custom input:hover,
-.input-group-custom select:hover,
-.input-group-custom textarea:hover {
-  transform: scale(1.02);
-}
-
-/* FOCO */
+/* Focus */
 .input-group-custom input:focus,
 .input-group-custom select:focus,
 .input-group-custom textarea:focus {
-  box-shadow: 0 0 0 2px #ff7a00;
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 2px rgba(255,122,0,0.2);
+  outline: none;
 }
 
-/* BOTÃO */
+/* Textarea */
+.input-group-custom textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+/* ======================================================
+                BOTÃO
+====================================================== */
+
 .btn-enviar {
-  width: 20px;
+  width: 100%;
   padding: 12px;
+
   border: none;
-  border-radius: 100px;
-  background: linear-gradient(135deg, #00ff15, #ff9f43);
+  border-radius: 10px;
+
+  background-color: #ff7a00;
   color: #fff;
-  font-weight: bold;
-  transition: 0.3s;
+
+  font-weight: 600;
+  transition: background-color 0.2s ease;
 }
 
-/* HOVER BOTÃO */
 .btn-enviar:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background-color: #e56d00;
+}
+
+/* ======================================================
+                ERRO
+====================================================== */
+
+.erro-form {
+  font-size: 0.85rem;
+  color: #ff4d4d;
+  text-align: center;
+  margin-top: 8px;
 }
