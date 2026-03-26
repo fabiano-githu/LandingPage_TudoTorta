@@ -485,142 +485,66 @@ body {
     padding: 15px;
   }
 }
-/* ======================================================
-                SECTION SOBRE - BASE
-====================================================== */
+
+
+
+
+/* =========================================
+        SECTION SOBRE
+========================================= */
+
 .sobre-section {
-  height: 1100px;
-  background: linear-gradient(135deg, #1a1a1a, #111);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Efeito leve de brilho no fundo */
-.sobre-section::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(255,122,0,0.25), transparent 70%);
-  top: -100px;
-  left: -100px;
-  filter: blur(80px);
-}
-
-/* ======================================================
-                TEXTO / HEADER
-====================================================== */
-
-.logo-marca {
-  font-size: 3.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  transition: 0.3s ease;
-}
-
-.logo-marca:hover {
-  color: #ff7a00 !important;
-  transform: scale(1.05);
-}
-
-/* Título principal */
-.titulo-com-icone {
-  font-size: 2.6rem;
-  font-weight: 500;
+  background: linear-gradient(135deg, #0a0a09, #634c20);
   color: #fff;
+  height: 900px;
 }
 
-/* Ícone do título */
-.titulo-com-icone .icone {
-  color: #ff7a00;
-  font-size: 1.6rem;
-}
-
-/* Parágrafo */
-.secao-sobre {
-  max-width: 650px;
-  color: #cfcfcf;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* ======================================================
-                CARDS
-====================================================== */
-
-.card-sobre {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.05);
-  transition: all 0.35s ease;
-  cursor: pointer;
-}
-
-/* Hover moderno */
-.card-sobre:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-  border: 1px solid rgba(255,122,0,0.3);
-}
-
-/* Ícones dos cards */
-.icone-card {
+/* TÍTULO */
+.titulo-sobre {
   font-size: 2.2rem;
-  color: #ff7a00;
+  font-family: 'Dancing Script', cursive;
+}
+
+.destaque {
+  color: #000;
+  background: #fff;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+/* SUBTÍTULO */
+.subtitulo-sobre {
+  opacity: 0.9;
+}
+
+/* TEXTO */
+.texto-sobre {
+  font-size: 1rem;
+  line-height: 1.0;
+  margin-bottom: 15px;
+}
+
+/* CARDS */
+.card-sobre {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
   transition: 0.3s;
 }
 
-/* animação no hover */
-.card-sobre:hover .icone-card {
-  transform: scale(1.2) rotate(5deg);
+/* HOVER */
+.card-sobre:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.25);
 }
 
-/* Título do card */
-.card-sobre h5 {
-  margin-bottom: 8px;
+/* ÍCONES */
+.card-sobre i {
+  color: #fff;
 }
 
-/* Texto do card */
-.card-sobre p {
-  color: #bfbfbf;
-  font-size: 0.9rem;
-}
 
-/* ======================================================
-                AJUSTES FINOS
-====================================================== */
 
-/* Centralização elegante do texto */
-.texto-sobre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Espaçamento entre título e texto */
-.titulo-com-icone span {
-  display: inline-block;
-}
-
-/* ======================================================
-                MICRO INTERAÇÕES
-====================================================== */
-
-/* Fade-in suave ao carregar */
-.sobre-section {
-  animation: fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* ======================================================
                     CSS SECTION CONTATOS
