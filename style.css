@@ -486,66 +486,141 @@ body {
   }
 }
 /* ======================================================
-                    SECTION SOBRE
+                SECTION SOBRE - BASE
 ====================================================== */
-
-/* Fundo */
 .sobre-section {
-  height: 900px;
-  background: linear-gradient(135deg, #ff7a00, #ff9f43);
+  height: 1100px;
+  background: linear-gradient(135deg, #1a1a1a, #111);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Texto */
-.texto-sobre {
-  max-width: 700px;
-  margin: 0 auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #2c2c2c;
-  text-align: center;
-  font-family: "Fjalla One", sans-serif;
+/* Efeito leve de brilho no fundo */
+.sobre-section::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255,122,0,0.25), transparent 70%);
+  top: -100px;
+  left: -100px;
+  filter: blur(80px);
 }
-
-/* Destaque */
-.destaque {
-  display: block;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-  color: #4a2500;
-}
-
 
 /* ======================================================
-                    CARDS SOBRE
+                TEXTO / HEADER
 ====================================================== */
 
-.card-icone {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 20px;
-  transition: 0.3s;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  height: 100%;
+.logo-marca {
+  font-size: 4.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
 }
 
-/* Ícones */
-.card-icone i {
-  font-size: 3rem;
+.logo-marca:hover {
+  color: #ff7a00 !important;
+  transform: scale(1.05);
+}
+
+/* Título principal */
+.titulo-com-icone {
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Ícone do título */
+.titulo-com-icone .icone {
   color: #ff7a00;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+/* Parágrafo */
+.secao-sobre {
+  max-width: 650px;
+  color: #cfcfcf;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ======================================================
+                CARDS
+====================================================== */
+
+.card-sobre {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+/* Hover moderno */
+.card-sobre:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,122,0,0.3);
+}
+
+/* Ícones dos cards */
+.icone-card {
+  font-size: 2.2rem;
+  color: #ff7a00;
   transition: 0.3s;
 }
 
-/* Hover */
-.card-icone:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+/* animação no hover */
+.card-sobre:hover .icone-card {
+  transform: scale(1.2) rotate(5deg);
 }
 
-.card-icone:hover i {
-  color: #d35400;
+/* Título do card */
+.card-sobre h5 {
+  margin-bottom: 8px;
 }
 
+/* Texto do card */
+.card-sobre p {
+  color: #bfbfbf;
+  font-size: 0.9rem;
+}
+
+/* ======================================================
+                AJUSTES FINOS
+====================================================== */
+
+/* Centralização elegante do texto */
+.texto-sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Espaçamento entre título e texto */
+.titulo-com-icone span {
+  display: inline-block;
+}
+
+/* ======================================================
+                MICRO INTERAÇÕES
+====================================================== */
+
+/* Fade-in suave ao carregar */
+.sobre-section {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* ======================================================
                     CSS SECTION CONTATOS
@@ -732,7 +807,7 @@ font-size: 70px;
 /* REDES SOCIAIS */
 .social-icon {
   font-size: 1.8rem;
-  color: #ff7a00;
+  color: #e9e4e0;
   transition: 0.3s;
 }
 
