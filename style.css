@@ -172,720 +172,274 @@ body {
 .btn-success:hover {
   transform: scale(1.05);
 }
+
+
 /* ======================================================
-                    CARDS PÁGINA SALGADOS
+                    CARDS PRODUTOS
 ====================================================== */
 
-
-
-#produtos {
-  min-height: 1100px;
-  display: flex;
-  align-items: center;
-  padding-top: 100px; /* diminui espaço em cima do conteúdo */
-}
-
-
-/* Cards personalizados */
 .card-custom {
-  width: 100%;             /* ocupa toda a coluna do Bootstrap */
-  height: 300px;           /* altura fixa do card */
   background: linear-gradient(135deg, #ff7a00, #ff9f43);
   color: #fff;
   border-radius: 18px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
+  transition: 0.3s;
 }
 
-/* Efeito hover opcional */
+/* Hover */
 .card-custom:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.35);
 }
 
-/* Imagem do card */
+/* Imagem */
 .card-custom img {
-  object-fit: cover;   /* mantém proporção da imagem e cobre área */
-  height: 150px;       /* altura da imagem dentro do card */
-  width: 100%;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
+  height: 300px;
+  object-fit: cover;
 }
 
-/* Corpo do card */
-.card-custom .card-body {
-  padding: 10px;
-  flex: 1;             /* ocupa o resto da altura do card */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+/* Layout botões */
+.card-custom .d-flex {
+  gap: 8px;
 }
 
-
-.text-salgados {
-
-  height: 100px;           /* altura fixa do card */
-  color:orange;                      /* branco */
-  font-family:"Merienda", cursive ;
-  font-size: 2.5rem;                /* tamanho grande */
-  font-weight: 700;                 /* negrito */
-  text-align: center;               /* centralizado */
-  margin-bottom: 100px;              /* distância para os cards */
-  padding-top: 100px;                   /* remove padding extra do py-3 */
-  line-height: 1.2;                 /* altura da linha ajustada */
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.3); /* sombra leve para destaque */
-  transition: all 0.3s ease;        /* suave se houver animação futura */
+.card-custom .btn {
+  flex: 1;
 }
 
-.text-salgados i {
-  color:orange;
-  margin-right: 10px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.text-salgados i:hover {
-  color: #ffd700;        /* muda cor ao passar o mouse */
-  transform: scale(1.3); /* aumenta levemente */
-}
-
-
-/* Botão comprar */
-.btn-comprar {
+.card-custom .btn-comprar {
   background: #00c853;
   color: #fff;
   border: none;
-  transition: 0.3s;
 }
 
-.btn-comprar:hover {
+.card-custom .btn-comprar:hover {
   background: #00e676;
 }
 
-/* Botão detalhes */
-.btn-detalhes {
+.card-custom .btn-detalhes {
   background: #1c1c1c;
   color: #fff;
   border: none;
-  transition: 0.3s;
 }
 
-.btn-detalhes:hover {
+.card-custom .btn-detalhes:hover {
   background: #333;
 }
 
 
 /* ======================================================
-                        MODAL
+                    SECTION SOBRE
 ====================================================== */
 
-/* Tamanho do modal */
-.modal-dialog {
-  max-width: 800px;
-}
-
-/* Estrutura */
-.modal-content {
-  background: #1c1c1c;
-  color: #fff;
-  border-radius: 15px;
-}
-
-/* Header */
-.modal-header {
-  border-bottom: 1px solid #333;
-}
-
-.modal-title {
-  color: #ff9f43;
-}
-
-/* Botão fechar */
-.btn-close {
-  filter: invert(1);
-}
-
-
-/* ======================================================
-                    IMAGEM DO MODAL
-====================================================== */
-
-.modal-img {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-
-/* ======================================================
-                        TEXTO
-====================================================== */
-
-.modal-desc {
-  color: #ccc;
-}
-
-.modal-preco {
-  font-size: 1.5rem;
-  color: #00e676 !important;
-}
-
-
-/* ======================================================
-                        BOTÃO
-====================================================== */
-
-#btnPedido {
-  background: #25D366;
-  border: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-#btnPedido:hover {
-  background: #1ebe5d;
-  transform: scale(1.05);
-}
-
-
-
-/* ======================================================
-                CSS BANNER ONLINE TORTA 
-====================================================== */
-
-.banner-cardapio {
-  position: relative;
-  height: 110vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-/* IMAGEM */
-.banner-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1);
-  transition: transform 6s ease;
-}
-
-/* ZOOM */
-.banner-cardapio:hover .banner-img {
-  transform: scale(1.1);
-}
-
-/* OVERLAY */
-.banner-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3));
-}
-
-/* CONTEÚDO CENTRAL */
-.banner-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-  color: #fff;
-
-  animation: fadeUp 1s ease;
-}
-
-/* ANIMAÇÃO */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* CAIXA GLASS CENTRAL */
-.info-box {
-  font-size: 40px;
-  max-width: 800px;
-  width: 90%;
-  min-height: 300px;
-
-  background: rgba(19, 8, 8, 0.15);
-  padding: 20px;
-  border-radius: 15px;
-  backdrop-filter: blur(12px);
-
-  transition: 0.3s ease;
-}
-
-/* HOVER CAIXA (CORRIGIDO) */
-.info-box:hover {
-  transform: scale(1.05);
-  background: rgba(26, 19, 19, 0.25);
-}
-
-/* ITENS */
-.info-box p {
-  margin: 6px 0;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-/* HOVER ITENS */
-.info-box p:hover {
-  transform: translateX(5px);
-  color: #ffd369;
-}
-
-/* TÍTULO */
-.banner-content h2 {
-  color: #ff9f43;
-  font-family: "Merienda", cursive;
-  font-size: 80px;
-  transition: 0.3s;
-}
-
-/* HOVER TÍTULO */
-.banner-content h2:hover {
-  letter-spacing: 2px;
-}
-
-/* PARÁGRAFO */
-.paragrafo-banner {
-  font-size: 20px;
-  margin-bottom: 20px;
-  font-weight: 300;
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-  .banner-cardapio {
-    height: 80vh;
-  }
-
-  .banner-content h2 {
-    font-size: 40px;
-  }
-
-  .info-box {
-    font-size: 18px;
-    padding: 15px;
-  }
-}
-/* ======================================================
-                SECTION SOBRE - BASE
-====================================================== */
+/* Fundo */
 .sobre-section {
-  height: 1100px;
-  background: linear-gradient(135deg, #1a1a1a, #111);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Efeito leve de brilho no fundo */
-.sobre-section::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(255,122,0,0.25), transparent 70%);
-  top: -100px;
-  left: -100px;
-  filter: blur(80px);
-}
-
-/* ======================================================
-                TEXTO / HEADER
-====================================================== */
-
-.logo-marca {
-  font-size: 3.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  transition: 0.3s ease;
-}
-
-.logo-marca:hover {
-  color: #ff7a00 !important;
-  transform: scale(1.05);
-}
-
-/* Título principal */
-.titulo-com-icone {
-  font-size: 2.6rem;
-  font-weight: 500;
-  color: #fff;
-}
-
-/* Ícone do título */
-.titulo-com-icone .icone {
-  color: #ff7a00;
-  font-size: 1.6rem;
-}
-
-/* Parágrafo */
-.secao-sobre {
-  max-width: 650px;
-  color: #cfcfcf;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* ======================================================
-                CARDS
-====================================================== */
-
-.card-sobre {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.05);
-  transition: all 0.35s ease;
-  cursor: pointer;
-}
-
-/* Hover moderno */
-.card-sobre:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-  border: 1px solid rgba(255,122,0,0.3);
-}
-
-/* Ícones dos cards */
-.icone-card {
-  font-size: 2.2rem;
-  color: #ff7a00;
-  transition: 0.3s;
-}
-
-/* animação no hover */
-.card-sobre:hover .icone-card {
-  transform: scale(1.2) rotate(5deg);
-}
-
-/* Título do card */
-.card-sobre h5 {
-  margin-bottom: 8px;
-}
-
-/* Texto do card */
-.card-sobre p {
-  color: #bfbfbf;
-  font-size: 0.9rem;
-}
-
-/* ======================================================
-                AJUSTES FINOS
-====================================================== */
-
-/* Centralização elegante do texto */
-.texto-sobre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Espaçamento entre título e texto */
-.titulo-com-icone span {
-  display: inline-block;
-}
-
-/* ======================================================
-                MICRO INTERAÇÕES
-====================================================== */
-
-/* Fade-in suave ao carregar */
-.sobre-section {
-  animation: fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ======================================================
-                    CSS SECTION CONTATOS
-====================================================== */
-/* FUNDO DA SECTION */
-.contato-section {
-  background: #fff;
-}
-
-/* INPUTS MAIS BONITOS */
-.form-control {
-  border-radius: 10px;
-  padding: 10px;
-}
-
-/* FOCO NOS INPUTS */
-.form-control:focus {
-  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.3);
-  border-color: #ff7a00;
-}
-
-
-/* =========================================
-        HOVER NOS ÍCONES - CONTATO
-========================================= */
-
-/* FUNDO */
-.contato-section{
   height: 900px;
   background: linear-gradient(135deg, #ff7a00, #ff9f43);
 }
 
-/* BOX */
-.form-box {
-  max-width: 500px;
-  background: #ff9f43;
-  backdrop-filter: blur(10px);
-  padding: 30px;
+/* Texto */
+.texto-sobre {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #2c2c2c;
+  text-align: center;
+  font-family: "Fjalla One", sans-serif;
+}
+
+/* Destaque */
+.destaque {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #4a2500;
+}
+
+
+/* ======================================================
+                    CARDS SOBRE
+====================================================== */
+
+.card-icone {
+  background: #ffffff;
+  padding: 25px;
   border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  height: 100%;
 }
 
-/* HOVER */
-.info-box i:hover {
-  transform: scale(2.2);
-  opacity: 1.8;
+/* Ícones */
+.card-icone i {
+  font-size: 3rem;
+  color: #ff7a00;
+  margin-bottom: 10px;
+  transition: 0.3s;
 }
 
-/* INPUT GROUP */
-.input-group-custom {
-  position: relative;
+/* Hover */
+.card-icone:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.card-icone:hover i {
+  color: #d35400;
+}
+
+
+
+/* ======================================================
+                SEÇÃO CONTATO
+====================================================== */
+
+.contato-section {
+  height: 1000px;
+  background-color: #111;
+  padding: 80px 0;
+}
+
+.text-h2-principal {
+  font-family:'Dancing Script', cursive ;
+  font-size: 50px;
+}
+
+/* ======================================================
+                INFORMAÇÕES
+====================================================== */
+
+.info-box h4 {
+  font-size: 1.4rem;
   margin-bottom: 20px;
 }
 
-/* ÍCONE */
-.input-group-custom i {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ff7a00;
-  font-size: 1.2rem;
+.info-box p {
+  margin-bottom: 12px;
+  color: #ccc;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
 }
 
-/* INPUT / SELECT / TEXTAREA */
+.info-box i {
+  color: #ff7a00;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.info-box i:hover {
+  color: #ffa94d;
+}
+
+/* Redes sociais */
+.info-box a {
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.info-box a:hover {
+  color: #ff7a00;
+}
+
+/* ======================================================
+                FORM BOX
+====================================================== */
+
+.form-box {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+}
+
+/* ======================================================
+                INPUT GROUP
+====================================================== */
+
+.input-group-custom {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+/* Ícones */
+.input-group-custom i {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1rem;
+}
+
+/* Inputs */
 .input-group-custom input,
 .input-group-custom select,
 .input-group-custom textarea {
   width: 100%;
-  padding: 12px 15px 12px 45px;
-  border: none;
-  border-radius: 12px;
-  outline: none;
-  background: #fff;
-  transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding-left: 40px;
+
+  border-radius: 10px;
+  border: 1px solid #2a2a2a;
+
+  background-color: #0f0f0f;
+  color: #fff;
+
+  font-size: 0.95rem;
 }
 
-/* TEXTAREA AJUSTE */
-.input-group-custom.textarea textarea {
-  height: 100px;
-  resize: none;
+/* Placeholder */
+.input-group-custom input::placeholder,
+.input-group-custom textarea::placeholder {
+  color: #777;
 }
 
-/* HOVER */
-.input-group-custom input:hover,
-.input-group-custom select:hover,
-.input-group-custom textarea:hover {
-  transform: scale(1.02);
-}
-
-/* FOCO */
+/* Focus */
 .input-group-custom input:focus,
 .input-group-custom select:focus,
 .input-group-custom textarea:focus {
-  box-shadow: 0 0 0 2px #ff7a00;
+  border-color: #ff7a00;
+  box-shadow: 0 0 0 2px rgba(255,122,0,0.2);
+  outline: none;
 }
 
-/* BOTÃO */
+/* Textarea */
+.input-group-custom textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+/* ======================================================
+                BOTÃO
+====================================================== */
+
 .btn-enviar {
-  width: 20px;
+  width: 100%;
   padding: 12px;
+
   border: none;
-  border-radius: 100px;
-  background: linear-gradient(135deg, #00ff15, #ff9f43);
+  border-radius: 10px;
+
+  background-color: #ff7a00;
   color: #fff;
-  font-weight: bold;
-  transition: 0.3s;
+
+  font-weight: 600;
+  transition: background-color 0.2s ease;
 }
 
-/* HOVER BOTÃO */
 .btn-enviar:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  background-color: #e56d00;
 }
 
-.logo-footer{
-font-size: 70px;
-  cursor: default;
-}
+/* ======================================================
+                ERRO
+====================================================== */
 
-
-/* =========================================
-        CSS BOTÃO FLUTUANTE ZAP
-========================================= */
-.btn-whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-
-  width: 50px;
-  height: 50px;
-
-  background: #25D366;
-  color: #fff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-  font-size: 28px;
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-
-  z-index: 999;
-
-  transition: 0.3s ease;
-}
-
-/* HOVER */
-.btn-whatsapp:hover {
-  transform: scale(1.1);
-  background: #1ebe5d;
-}
-
-/* MOBILE */
-@media (max-width: 576px) {
-  .btn-whatsapp {
-    width: 55px;
-    height: 55px;
-    font-size: 24px;
-    bottom: 15px;
-    right: 15px;
-  }
-}
-
-
-
-/* =========================================
-               CSS FOOTER
-========================================= */
-/* FUNDO */
-.footer {
-  color: #fff;
-}
-
-/* TEXTO */
-.footer p,
-.footer h6 {
-  color: #fff;
-}
-
-/* REDES SOCIAIS */
-.social-icon {
-  font-size: 1.8rem;
-  color: #e9e4e0;
-  transition: 0.3s;
-}
-
-/* HOVER REDES */
-.social-icon:hover {
-  transform: translateY(-5px) scale(1.2);
-  color: #faf1f1;
-}
-
-/* PARCEIROS */
-.parceiro {
-  padding: 8px 15px;
-  border-radius: 20px;
-  background: #ff7a00;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-/* HOVER PARCEIROS */
-.parceiro:hover {
-  background: #fff;
-  color: #ff7a00;
-  transform: scale(1.1);
-}
-
-
-
-/* =========================================
-               CSS LOGO-FOOTER
-========================================= */
-/* CONTAINER CENTRALIZADO */
-.logo-footer {
-  font-family: "Merienda", cursive;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* TAMANHO */
-  font-size: 5.6rem; /* diminui aqui se quiser */
-  font-weight: bold;
-
-  /* COR */
-  color: #fff !important;
-  text-decoration: none;
-
-  /* SUAVIDADE */
-  transition: 0.3s ease;
-}
-
-/* ÍCONE */
-.logo-footer i {
-  font-size: 5.3rem;
-  color: #ff7a00;
-  transition: 0.3s ease;
-}
-
-/* HOVER (efeito profissional) */
-.logo-footer:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
-/* HOVER NO ÍCONE */
-.logo-footer:hover i {
-  transform: rotate(10deg) scale(1.2);
-}
-
-.copyright {
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 400;
+.erro-form {
+  font-size: 0.85rem;
+  color: #ff4d4d;
   text-align: center;
-  letter-spacing: 0.5px;
-  transition: 0.3s ease;
-}
-
-.copyright:hover {
-  color: #611010;
-  letter-spacing: 1px;
+  margin-top: 8px;
 }
