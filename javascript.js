@@ -26,6 +26,34 @@ document.addEventListener("DOMContentLoaded", () => {
       preco: "R$ 6,00",
       img: "imagens/pastel-assado-de-carne-seca-e-requeijao-40306-350x230.jpg",
       desc: "Carne seca com recheio especial"
+    },
+
+     {
+      nome: "Pastel de Forno (Carne Seca)",
+      preco: "R$ 6,00",
+      img: "imagens/pastel-assado-de-carne-seca-e-requeijao-40306-350x230.jpg",
+      desc: "Carne seca com recheio especial"
+    }, 
+
+     {
+      nome: "Pastel de Forno (Carne Seca)",
+      preco: "R$ 6,00",
+      img: "imagens/pastel-assado-de-carne-seca-e-requeijao-40306-350x230.jpg",
+      desc: "Carne seca com recheio especial"
+    },
+
+     {
+      nome: "Pastel de Forno (Carne Seca)",
+      preco: "R$ 6,00",
+      img: "imagens/pastel-assado-de-carne-seca-e-requeijao-40306-350x230.jpg",
+      desc: "Carne seca com recheio especial"
+    },
+
+     {
+      nome: "Pastel de Forno (Carne Seca)",
+      preco: "R$ 6,00",
+      img: "imagens/pastel-assado-de-carne-seca-e-requeijao-40306-350x230.jpg",
+      desc: "Carne seca com recheio especial"
     }
   ];
 

@@ -173,40 +173,83 @@ body {
   transform: scale(1.05);
 }
 /* ======================================================
-                    CARDS PRODUTOS
+                    CARDS PÁGINA SALGADOS
 ====================================================== */
 
-.card-custom {
 
-   width: 326px;
-  height: 200px;
+
+#produtos {
+  min-height: 1100px;
+  display: flex;
+  align-items: center;
+  padding-top: 100px; /* diminui espaço em cima do conteúdo */
+}
+
+
+/* Cards personalizados */
+.card-custom {
+  width: 100%;             /* ocupa toda a coluna do Bootstrap */
+  height: 300px;           /* altura fixa do card */
   background: linear-gradient(135deg, #ff7a00, #ff9f43);
   color: #fff;
   border-radius: 18px;
   overflow: hidden;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Hover do card */
+/* Efeito hover opcional */
 .card-custom:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-/* Imagem */
+/* Imagem do card */
 .card-custom img {
-  height: 150px;
-  object-fit: cover;
+  object-fit: cover;   /* mantém proporção da imagem e cobre área */
+  height: 150px;       /* altura da imagem dentro do card */
+  width: 100%;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
 }
 
-/* Botões layout */
-.card-custom .d-flex {
-  gap: 8px;
+/* Corpo do card */
+.card-custom .card-body {
+  padding: 10px;
+  flex: 1;             /* ocupa o resto da altura do card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card-custom .btn {
-  flex: 1;
+
+.text-salgados {
+
+  height: 100px;           /* altura fixa do card */
+  color:orange;                      /* branco */
+  font-family:"Merienda", cursive ;
+  font-size: 2.5rem;                /* tamanho grande */
+  font-weight: 700;                 /* negrito */
+  text-align: center;               /* centralizado */
+  margin-bottom: 100px;              /* distância para os cards */
+  padding-top: 100px;                   /* remove padding extra do py-3 */
+  line-height: 1.2;                 /* altura da linha ajustada */
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3); /* sombra leve para destaque */
+  transition: all 0.3s ease;        /* suave se houver animação futura */
 }
+
+.text-salgados i {
+  color:orange;
+  margin-right: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.text-salgados i:hover {
+  color: #ffd700;        /* muda cor ao passar o mouse */
+  transform: scale(1.3); /* aumenta levemente */
+}
+
 
 /* Botão comprar */
 .btn-comprar {
